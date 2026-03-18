@@ -18,7 +18,7 @@ const activities = [
     emoji: "🧘",
     title: "Mindfulness (Atenção Plena)",
     desc: "O antídoto para a ansiedade infantil. Foco, presença e equilíbrio emocional.",
-    color: "border-green/30 hover:border-green/60",
+    color: "border-secondary/30 hover:border-secondary/60",
   },
   {
     emoji: "✍️",
