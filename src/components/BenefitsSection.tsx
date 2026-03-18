@@ -12,19 +12,19 @@ const benefits = [
     skill: "Memória de Trabalho",
     result: "Ele consegue seguir instruções e organizar o raciocínio com clareza.",
     emoji: "🧠",
-    color: "bg-secondary/10 border-secondary/20",
+    color: "bg-blue-medium/10 border-blue-medium/20",
   },
   {
     skill: "Flexibilidade Cognitiva",
     result: "Menos \"travas\" diante do novo e mais criatividade para resolver problemas.",
     emoji: "🔄",
-    color: "bg-accent/10 border-accent/20",
+    color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Autonomia Real",
     result: "Menos dependência dos pais para o dever de casa e rotinas básicas.",
     emoji: "🦸",
-    color: "bg-green/10 border-green/20",
+    color: "bg-secondary/10 border-secondary/20",
   },
 ];
 
@@ -41,7 +41,7 @@ const BenefitsSection = () => (
       <AnimatedSection delay={0.1}>
         <div className="flex justify-center gap-8 mb-10 text-sm font-bold text-muted-foreground">
           <span className="bg-primary/10 px-4 py-2 rounded-full text-primary">O que treinamos</span>
-          <span className="bg-green/10 px-4 py-2 rounded-full text-green">O que você percebe em casa e na escola</span>
+          <span className="bg-secondary/10 px-4 py-2 rounded-full text-secondary">O que você percebe em casa e na escola</span>
         </div>
       </AnimatedSection>
 

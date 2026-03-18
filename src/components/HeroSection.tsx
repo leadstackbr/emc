@@ -26,7 +26,7 @@ const HeroSection = () => (
         Prepare seu filho para os desafios do futuro desenvolvendo{" "}
         <span className="text-primary">foco</span>,{" "}
         <span className="text-secondary">autonomia</span> e{" "}
-        <span className="text-accent">inteligência emocional</span>.
+        <span className="text-blue-medium">inteligência emocional</span>.
       </motion.h1>
 
       <motion.p
