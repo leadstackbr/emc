@@ -41,7 +41,7 @@ const BenefitsSection = () => (
       <AnimatedSection delay={0.1}>
         <div className="flex justify-center gap-8 mb-10 text-sm font-bold text-muted-foreground">
           <span className="bg-primary/10 px-4 py-2 rounded-full text-primary">O que treinamos</span>
-          <span className="bg-green/10 px-4 py-2 rounded-full text-green">O que você percebe em casa e na escola</span>
+          <span className="bg-secondary/10 px-4 py-2 rounded-full text-secondary">O que você percebe em casa e na escola</span>
         </div>
       </AnimatedSection>
 

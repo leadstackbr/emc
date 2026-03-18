@@ -24,7 +24,7 @@ const activities = [
     emoji: "✍️",
     title: "Literatura Crítica",
     desc: "Formando crianças que não apenas leem, mas interpretam e questionam o mundo ao redor.",
-    color: "border-purple/30 hover:border-purple/60",
+    color: "border-blue-dark/30 hover:border-blue-dark/60",
   },
   {
     emoji: "🏆",
