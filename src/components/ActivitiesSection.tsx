@@ -6,7 +6,7 @@ const activities = [
     emoji: "🎨",
     title: "Artes (Modelando Sonhos)",
     desc: "Mais que pintura, é o treino da regulação emocional e planejamento através da expressão manual.",
-    color: "border-pink/30 hover:border-pink/60",
+    color: "border-blue-medium/30 hover:border-blue-medium/60",
   },
   {
     emoji: "💰",
