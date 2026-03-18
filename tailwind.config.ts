@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Baloo 2', 'cursive'],
+        body: ['Nunito', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "blue-light": "hsl(var(--blue-light))",
+        "blue-medium": "hsl(var(--blue-medium))",
+        "blue-dark": "hsl(var(--blue-dark))",
+        sky: "hsl(var(--sky))",
+        yellow: "hsl(var(--yellow))",
+        green: "hsl(var(--green))",
+        pink: "hsl(var(--pink))",
+        purple: "hsl(var(--purple))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
