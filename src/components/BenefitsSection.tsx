@@ -1,29 +1,31 @@
 import { motion } from "framer-motion";
+import { ShieldCheck, BrainCircuit, Shuffle, Rocket, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ReactNode } from "react";
 
-const benefits = [
+const benefits: { skill: string; result: string; icon: ReactNode; color: string }[] = [
   {
     skill: "Controle Inibitório",
     result: "Ele pensa antes de agir e lida melhor com impulsos e emoções.",
-    emoji: "🛑",
+    icon: <ShieldCheck className="text-primary" size={28} strokeWidth={2} />,
     color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Memória de Trabalho",
     result: "Ele consegue seguir instruções e organizar o raciocínio com clareza.",
-    emoji: "🧠",
+    icon: <BrainCircuit className="text-blue-medium" size={28} strokeWidth={2} />,
     color: "bg-blue-medium/10 border-blue-medium/20",
   },
   {
     skill: "Flexibilidade Cognitiva",
     result: "Menos \"travas\" diante do novo e mais criatividade para resolver problemas.",
-    emoji: "🔄",
+    icon: <Shuffle className="text-secondary" size={28} strokeWidth={2} />,
     color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Autonomia Real",
     result: "Menos dependência dos pais para o dever de casa e rotinas básicas.",
-    emoji: "🦸",
+    icon: <Rocket className="text-blue-dark" size={28} strokeWidth={2} />,
     color: "bg-secondary/10 border-secondary/20",
   },
 ];
@@ -53,7 +55,9 @@ const BenefitsSection = () => (
               className={`rounded-2xl border-2 p-6 md:p-8 bg-background ${item.color} transition-shadow hover:shadow-lg`}
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">{item.emoji}</span>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  {item.icon}
+                </div>
                 <h3 className="font-display text-xl font-bold text-foreground">{item.skill}</h3>
               </div>
               <p className="text-muted-foreground text-base leading-relaxed">{item.result}</p>
@@ -65,7 +69,7 @@ const BenefitsSection = () => (
       <AnimatedSection delay={0.6}>
         <div className="text-center">
           <a href="#inscricao" className="btn-cta">
-            🚀 Quero garantir a vaga do meu filho
+            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
           </a>
         </div>
       </AnimatedSection>

@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import { Target, ShieldAlert, ClipboardList, Lightbulb, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ReactNode } from "react";
 
-const problems = [
-  { emoji: "🎯", text: "Manter o foco em uma única tarefa até o fim." },
-  { emoji: "😤", text: "Lidar com frustrações sem desistir no primeiro erro." },
-  { emoji: "📋", text: "Organizar o próprio tempo e materiais de forma independente." },
-  { emoji: "💡", text: "Pensar de forma crítica e criativa diante de problemas." },
+const problems: { icon: ReactNode; text: string }[] = [
+  { icon: <Target className="text-primary" size={28} strokeWidth={2} />, text: "Manter o foco em uma única tarefa até o fim." },
+  { icon: <ShieldAlert className="text-secondary" size={28} strokeWidth={2} />, text: "Lidar com frustrações sem desistir no primeiro erro." },
+  { icon: <ClipboardList className="text-blue-medium" size={28} strokeWidth={2} />, text: "Organizar o próprio tempo e materiais de forma independente." },
+  { icon: <Lightbulb className="text-blue-dark" size={28} strokeWidth={2} />, text: "Pensar de forma crítica e criativa diante de problemas." },
 ];
 
 const ProblemSection = () => (
@@ -31,7 +33,9 @@ const ProblemSection = () => (
               whileHover={{ scale: 1.03, y: -4 }}
               className="section-card flex items-start gap-4 bg-background"
             >
-              <span className="text-3xl flex-shrink-0 animate-bounce-gentle" style={{ animationDelay: `${i * 0.3}s` }}>{item.emoji}</span>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 animate-bounce-gentle" style={{ animationDelay: `${i * 0.3}s` }}>
+                {item.icon}
+              </div>
               <p className="text-foreground font-medium text-base md:text-lg">{item.text}</p>
             </motion.div>
           </AnimatedSection>
@@ -47,7 +51,7 @@ const ProblemSection = () => (
       <AnimatedSection delay={0.6}>
         <div className="text-center">
           <a href="#inscricao" className="btn-cta">
-            🚀 Quero garantir a vaga do meu filho
+            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
           </a>
         </div>
       </AnimatedSection>

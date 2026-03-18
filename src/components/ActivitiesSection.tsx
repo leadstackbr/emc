@@ -1,45 +1,47 @@
 import { motion } from "framer-motion";
+import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack, ImageIcon } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ReactNode } from "react";
 
-const activities = [
+const activities: { icon: ReactNode; title: string; desc: string; color: string }[] = [
   {
-    emoji: "🎨",
+    icon: <Palette className="text-primary" size={28} strokeWidth={1.8} />,
     title: "Artes (Modelando Sonhos)",
     desc: "Mais que pintura, é o treino da regulação emocional e planejamento através da expressão manual.",
     color: "border-blue-medium/30 hover:border-blue-medium/60",
   },
   {
-    emoji: "💰",
+    icon: <Coins className="text-blue-dark" size={28} strokeWidth={1.8} />,
     title: "Educação Financeira e Empreendedorismo",
     desc: "Ensinando autonomia e visão estratégica para quem vai liderar o próprio futuro.",
     color: "border-primary/30 hover:border-primary/60",
   },
   {
-    emoji: "🧘",
+    icon: <Flower2 className="text-secondary" size={28} strokeWidth={1.8} />,
     title: "Mindfulness (Atenção Plena)",
     desc: "O antídoto para a ansiedade infantil. Foco, presença e equilíbrio emocional.",
     color: "border-secondary/30 hover:border-secondary/60",
   },
   {
-    emoji: "✍️",
+    icon: <BookOpen className="text-blue-medium" size={28} strokeWidth={1.8} />,
     title: "Literatura Crítica",
     desc: "Formando crianças que não apenas leem, mas interpretam e questionam o mundo ao redor.",
     color: "border-blue-dark/30 hover:border-blue-dark/60",
   },
   {
-    emoji: "🏆",
+    icon: <Trophy className="text-primary" size={28} strokeWidth={1.8} />,
     title: "Mentalidade Campeã",
     desc: "Resiliência e autoconfiança para lidar com desafios, vitórias e erros, seja no esporte ou na vida.",
     color: "border-secondary/30 hover:border-secondary/60",
   },
   {
-    emoji: "🤖",
+    icon: <Cpu className="text-blue-dark" size={28} strokeWidth={1.8} />,
     title: "Robótica Educacional",
     desc: "Onde o raciocínio lógico e a tecnologia se transformam em soluções reais.",
     color: "border-primary/30 hover:border-primary/60",
   },
   {
-    emoji: "🧩",
+    icon: <PuzzleIcon className="text-secondary" size={28} strokeWidth={1.8} />,
     title: "Organização para a Vida",
     desc: "Estratégias práticas para arrumar o quarto, a mochila e a rotina. O fim da \"bagunça mental\".",
     color: "border-blue-medium/30 hover:border-blue-medium/60",
@@ -56,8 +58,10 @@ const ActivitiesSection = () => (
 
     <div className="relative max-w-5xl mx-auto px-6 pt-8">
       <AnimatedSection>
-        <div className="text-center mb-4">
-          <span className="text-5xl animate-wiggle inline-block">🎒</span>
+        <div className="text-center mb-4 flex justify-center">
+          <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-wiggle">
+            <Backpack className="text-primary" size={36} strokeWidth={1.8} />
+          </div>
         </div>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">
           Experiências
@@ -75,12 +79,15 @@ const ActivitiesSection = () => (
               className={`rounded-2xl border-2 bg-background p-6 h-full transition-all duration-300 ${item.color}`}
               style={{ boxShadow: "var(--shadow-card)" }}
             >
-              <span className="text-4xl mb-4 inline-block">{item.emoji}</span>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                {item.icon}
+              </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               {/* Image placeholder */}
               <div className="mt-4 w-full h-32 rounded-xl bg-muted flex items-center justify-center border-2 border-dashed border-border">
-                <span className="text-muted-foreground text-xs font-medium">📸 Imagem da atividade</span>
+                <ImageIcon className="text-muted-foreground" size={20} />
+                <span className="text-muted-foreground text-xs font-medium ml-2">Imagem da atividade</span>
               </div>
             </motion.div>
           </AnimatedSection>
