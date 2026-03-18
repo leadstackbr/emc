@@ -12,7 +12,7 @@ const activities = [
     emoji: "💰",
     title: "Educação Financeira e Empreendedorismo",
     desc: "Ensinando autonomia e visão estratégica para quem vai liderar o próprio futuro.",
-    color: "border-accent/30 hover:border-accent/60",
+    color: "border-primary/30 hover:border-primary/60",
   },
   {
     emoji: "🧘",
