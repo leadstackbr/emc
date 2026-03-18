@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
+import { Star, Circle, Triangle, Diamond } from "lucide-react";
 
 const FloatingShapes = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {/* Circles */}
     <motion.div
       className="absolute w-20 h-20 rounded-full bg-primary/10 top-[10%] left-[5%]"
       animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
@@ -14,36 +14,36 @@ const FloatingShapes = () => (
       transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
     />
     <motion.div
-      className="absolute w-16 h-16 rounded-full bg-accent/20 bottom-[15%] left-[12%]"
+      className="absolute w-16 h-16 rounded-full bg-blue-medium/15 bottom-[15%] left-[12%]"
       animate={{ y: [0, -12, 0] }}
       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
     />
-    {/* Stars */}
     <motion.div
-      className="absolute text-3xl top-[30%] right-[15%]"
+      className="absolute top-[30%] right-[15%] text-primary/20"
       animate={{ scale: [1, 1.3, 1], rotate: [0, 20, 0] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
     >
-      ⭐
+      <Star size={32} fill="currentColor" />
     </motion.div>
     <motion.div
-      className="absolute text-2xl bottom-[25%] right-[25%]"
+      className="absolute bottom-[25%] right-[25%] text-secondary/20"
       animate={{ scale: [1, 1.2, 1], rotate: [0, -15, 0] }}
       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
     >
-      ✨
+      <Diamond size={28} fill="currentColor" />
     </motion.div>
-    {/* Triangles / squares as decorative */}
     <motion.div
-      className="absolute w-12 h-12 rounded-lg bg-pink/10 top-[50%] left-[3%] rotate-12"
+      className="absolute w-12 h-12 rounded-lg bg-blue-medium/10 top-[50%] left-[3%] rotate-12"
       animate={{ rotate: [12, 45, 12] }}
       transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
     />
     <motion.div
-      className="absolute w-10 h-10 rounded-lg bg-green/10 top-[60%] right-[5%] rotate-45"
+      className="absolute top-[60%] right-[5%] text-primary/15"
       animate={{ rotate: [45, 90, 45] }}
       transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-    />
+    >
+      <Triangle size={24} fill="currentColor" />
+    </motion.div>
   </div>
 );
 

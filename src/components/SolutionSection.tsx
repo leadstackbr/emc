@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
+import { Music, Brain, Eye, Users, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ReactNode } from "react";
 
-const differentials = [
-  { emoji: "🧠", title: "Integração Sensorial", desc: "Estímulos que facilitam a aquisição de novas informações." },
-  { emoji: "🎵", title: "Foco Reforçado", desc: "A música treina a atenção de forma lúdica e profunda." },
-  { emoji: "🤝", title: "Interdisciplinaridade", desc: "Profissionais de diversas áreas unidos por um único objetivo: o desenvolvimento do seu pequeno aprendiz." },
+const differentials: { icon: ReactNode; title: string; desc: string }[] = [
+  { icon: <Eye className="text-primary" size={32} strokeWidth={1.8} />, title: "Integração Sensorial", desc: "Estímulos que facilitam a aquisição de novas informações." },
+  { icon: <Music className="text-secondary" size={32} strokeWidth={1.8} />, title: "Foco Reforçado", desc: "A música treina a atenção de forma lúdica e profunda." },
+  { icon: <Users className="text-blue-medium" size={32} strokeWidth={1.8} />, title: "Interdisciplinaridade", desc: "Profissionais de diversas áreas unidos por um único objetivo: o desenvolvimento do seu pequeno aprendiz." },
 ];
 
 const SolutionSection = () => (
   <section className="relative py-20 md:py-28 bg-background overflow-hidden">
-    {/* Decorative blobs */}
     <div className="absolute top-10 right-0 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
     <div className="absolute bottom-10 left-0 w-60 h-60 rounded-full bg-secondary/5 blur-3xl" />
 
     <div className="relative max-w-5xl mx-auto px-6">
       <AnimatedSection>
-        <div className="text-center mb-6">
-          <span className="text-5xl animate-float inline-block">🎶</span>
+        <div className="text-center mb-6 flex justify-center">
+          <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-float">
+            <Brain className="text-primary" size={36} strokeWidth={1.8} />
+          </div>
         </div>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">
           Um espaço onde o cérebro se exercita{" "}
@@ -51,7 +54,9 @@ const SolutionSection = () => (
               whileHover={{ y: -6, scale: 1.02 }}
               className="section-card text-center h-full"
             >
-              <span className="text-4xl mb-4 inline-block animate-bounce-gentle" style={{ animationDelay: `${i * 0.4}s` }}>{item.emoji}</span>
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 animate-bounce-gentle" style={{ animationDelay: `${i * 0.4}s` }}>
+                {item.icon}
+              </div>
               <h4 className="font-display text-xl font-bold text-foreground mb-2">{item.title}</h4>
               <p className="text-muted-foreground text-base">{item.desc}</p>
             </motion.div>
@@ -62,7 +67,7 @@ const SolutionSection = () => (
       <AnimatedSection delay={0.6}>
         <div className="text-center">
           <a href="#inscricao" className="btn-cta">
-            🚀 Quero garantir a vaga do meu filho
+            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
           </a>
         </div>
       </AnimatedSection>
