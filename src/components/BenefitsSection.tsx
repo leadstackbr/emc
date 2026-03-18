@@ -12,13 +12,13 @@ const benefits = [
     skill: "Memória de Trabalho",
     result: "Ele consegue seguir instruções e organizar o raciocínio com clareza.",
     emoji: "🧠",
-    color: "bg-secondary/10 border-secondary/20",
+    color: "bg-blue-medium/10 border-blue-medium/20",
   },
   {
     skill: "Flexibilidade Cognitiva",
     result: "Menos \"travas\" diante do novo e mais criatividade para resolver problemas.",
     emoji: "🔄",
-    color: "bg-accent/10 border-accent/20",
+    color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Autonomia Real",
