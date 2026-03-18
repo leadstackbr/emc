@@ -24,7 +24,7 @@ const benefits = [
     skill: "Autonomia Real",
     result: "Menos dependência dos pais para o dever de casa e rotinas básicas.",
     emoji: "🦸",
-    color: "bg-green/10 border-green/20",
+    color: "bg-secondary/10 border-secondary/20",
   },
 ];
 
