@@ -28,7 +28,8 @@ const CTASection = () => (
 
       <AnimatedSection delay={0.15}>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          As vagas são <strong className="text-foreground">limitadas</strong> para garantir que cada criança receba a atenção personalizada que o Método EMC exige.
+          As vagas são <strong className="text-foreground">limitadas</strong> para garantir que cada criança receba a
+          atenção personalizada que o Método EMC exige.
         </p>
       </AnimatedSection>
 
@@ -55,7 +56,9 @@ const CTASection = () => (
             <MapPin className="text-primary" size={18} />
             <p className="text-muted-foreground text-base">Endereço</p>
           </div>
-          <p className="text-foreground font-bold text-lg">[Inserir endereço aqui]</p>
+          <p className="text-foreground font-bold text-lg">
+            R. Petit Carneiro, 1122 - cj 205 - Água Verde, Curitiba - PR, 80240-050
+          </p>
         </div>
       </AnimatedSection>
 
