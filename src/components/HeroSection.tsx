@@ -6,7 +6,7 @@ import heroBg from "@/assets/hero-bg.png";
 const HeroSection = () => (
   <section
     className="relative flex flex-col items-center justify-center overflow-hidden"
-    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "900px" }}
+    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "800px" }}
   >
     <FloatingShapes />
 
