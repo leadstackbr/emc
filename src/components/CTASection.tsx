@@ -12,6 +12,7 @@ const features: { icon: ReactNode; text: string }[] = [
 
 const CTASection = () => (
   <section id="inscricao" className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
+    <CTAFloatingIcons />
     <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-primary/5 blur-2xl" />
     <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-secondary/5 blur-2xl" />
 

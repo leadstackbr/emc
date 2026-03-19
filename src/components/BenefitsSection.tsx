@@ -33,6 +33,7 @@ const benefits: { skill: string; result: string; icon: ReactNode; color: string 
 
 const BenefitsSection = () => (
   <section className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
+    <BenefitsFloatingIcons />
     <div className="max-w-5xl mx-auto px-6">
       <AnimatedSection>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">
