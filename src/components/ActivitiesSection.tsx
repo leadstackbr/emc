@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack } from "lucide-react";
+import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack, Music } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { ReactNode } from "react";
 
@@ -10,6 +10,7 @@ import mentalidadeImg from "@/assets/mentalidade.webp";
 import roboticaImg from "@/assets/robotica.webp";
 import organizacaoImg from "@/assets/organizacao.webp";
 import musicaImg from "@/assets/musica.webp";
+import empreendedorismoImg from "@/assets/empreendedorismo.webp";
 
 const activities: { icon: ReactNode; title: string; desc: string; color: string; image: string }[] = [
   {
@@ -24,7 +25,7 @@ const activities: { icon: ReactNode; title: string; desc: string; color: string;
     title: "Educação Financeira e Empreendedorismo",
     desc: "Ensinando autonomia e visão estratégica para quem vai liderar o próprio futuro.",
     color: "border-primary/30 hover:border-primary/60",
-    image: musicaImg,
+    image: empreendedorismoImg,
   },
   {
     icon: <Flower2 className="text-secondary" size={28} strokeWidth={1.8} />,
@@ -46,6 +47,13 @@ const activities: { icon: ReactNode; title: string; desc: string; color: string;
     desc: "Resiliência e autoconfiança para lidar com desafios, vitórias e erros, seja no esporte ou na vida.",
     color: "border-secondary/30 hover:border-secondary/60",
     image: mentalidadeImg,
+  },
+  {
+    icon: <Music className="text-primary" size={28} strokeWidth={1.8} />,
+    title: "Música e Ritmo",
+    desc: "Desenvolvimento da coordenação, criatividade e expressão através da linguagem musical.",
+    color: "border-blue-medium/30 hover:border-blue-medium/60",
+    image: musicaImg,
   },
   {
     icon: <Cpu className="text-blue-dark" size={28} strokeWidth={1.8} />,
@@ -71,7 +79,7 @@ const ActivitiesSection = () => (
       </svg>
     </div>
 
-    <div className="relative max-w-5xl mx-auto px-6 pt-8">
+    <div className="relative max-w-6xl mx-auto px-6 pt-8">
       <AnimatedSection>
         <div className="text-center mb-4 flex justify-center">
           <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-wiggle">
@@ -86,7 +94,7 @@ const ActivitiesSection = () => (
         </p>
       </AnimatedSection>
 
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-12">
         {activities.map((item, i) => (
           <AnimatedSection key={i} delay={0.1 + i * 0.08}>
             <motion.div
