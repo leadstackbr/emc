@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Music, Brain, Eye, Users, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { SolutionFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const differentials: { icon: ReactNode; title: string; desc: string }[] = [
