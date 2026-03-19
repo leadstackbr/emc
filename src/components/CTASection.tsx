@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles, CalendarDays, Stethoscope, Home, MapPin, MessageCircle } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { CTAFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const features: { icon: ReactNode; text: string }[] = [
