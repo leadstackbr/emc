@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack, Music } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ActivitiesFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 import pinturaImg from "@/assets/pintura.webp";
