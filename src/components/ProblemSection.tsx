@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, ShieldAlert, ClipboardList, Lightbulb, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ProblemFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const problems: { icon: ReactNode; text: string }[] = [
