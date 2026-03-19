@@ -1,50 +1,65 @@
 import { motion } from "framer-motion";
-import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack, ImageIcon } from "lucide-react";
+import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { ReactNode } from "react";
 
-const activities: { icon: ReactNode; title: string; desc: string; color: string }[] = [
+import pinturaImg from "@/assets/pintura.webp";
+import leituraImg from "@/assets/leitura.webp";
+import meditacaoImg from "@/assets/meditacao.webp";
+import mentalidadeImg from "@/assets/mentalidade.webp";
+import roboticaImg from "@/assets/robotica.webp";
+import organizacaoImg from "@/assets/organizacao.webp";
+import musicaImg from "@/assets/musica.webp";
+
+const activities: { icon: ReactNode; title: string; desc: string; color: string; image: string }[] = [
   {
     icon: <Palette className="text-primary" size={28} strokeWidth={1.8} />,
     title: "Artes (Modelando Sonhos)",
     desc: "Mais que pintura, é o treino da regulação emocional e planejamento através da expressão manual.",
     color: "border-blue-medium/30 hover:border-blue-medium/60",
+    image: pinturaImg,
   },
   {
     icon: <Coins className="text-blue-dark" size={28} strokeWidth={1.8} />,
     title: "Educação Financeira e Empreendedorismo",
     desc: "Ensinando autonomia e visão estratégica para quem vai liderar o próprio futuro.",
     color: "border-primary/30 hover:border-primary/60",
+    image: musicaImg,
   },
   {
     icon: <Flower2 className="text-secondary" size={28} strokeWidth={1.8} />,
     title: "Mindfulness (Atenção Plena)",
     desc: "O antídoto para a ansiedade infantil. Foco, presença e equilíbrio emocional.",
     color: "border-secondary/30 hover:border-secondary/60",
+    image: meditacaoImg,
   },
   {
     icon: <BookOpen className="text-blue-medium" size={28} strokeWidth={1.8} />,
     title: "Literatura Crítica",
     desc: "Formando crianças que não apenas leem, mas interpretam e questionam o mundo ao redor.",
     color: "border-blue-dark/30 hover:border-blue-dark/60",
+    image: leituraImg,
   },
   {
     icon: <Trophy className="text-primary" size={28} strokeWidth={1.8} />,
     title: "Mentalidade Campeã",
     desc: "Resiliência e autoconfiança para lidar com desafios, vitórias e erros, seja no esporte ou na vida.",
     color: "border-secondary/30 hover:border-secondary/60",
+    image: mentalidadeImg,
   },
   {
     icon: <Cpu className="text-blue-dark" size={28} strokeWidth={1.8} />,
     title: "Robótica Educacional",
     desc: "Onde o raciocínio lógico e a tecnologia se transformam em soluções reais.",
     color: "border-primary/30 hover:border-primary/60",
+    image: roboticaImg,
   },
   {
     icon: <PuzzleIcon className="text-secondary" size={28} strokeWidth={1.8} />,
     title: "Organização para a Vida",
     desc: "Estratégias práticas para arrumar o quarto, a mochila e a rotina. O fim da \"bagunça mental\".",
     color: "border-blue-medium/30 hover:border-blue-medium/60",
+    image: organizacaoImg,
   },
 ];
 
@@ -76,18 +91,18 @@ const ActivitiesSection = () => (
           <AnimatedSection key={i} delay={0.1 + i * 0.08}>
             <motion.div
               whileHover={{ y: -8, scale: 1.02 }}
-              className={`rounded-2xl border-2 bg-background p-6 h-full transition-all duration-300 ${item.color}`}
+              className={`rounded-2xl border-2 bg-background overflow-hidden h-full transition-all duration-300 ${item.color}`}
               style={{ boxShadow: "var(--shadow-card)" }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                {item.icon}
+              <div className="w-full h-40 overflow-hidden">
+                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
               </div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-              {/* Image placeholder */}
-              <div className="mt-4 w-full h-32 rounded-xl bg-muted flex items-center justify-center border-2 border-dashed border-border">
-                <ImageIcon className="text-muted-foreground" size={20} />
-                <span className="text-muted-foreground text-xs font-medium ml-2">Imagem da atividade</span>
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
           </AnimatedSection>
