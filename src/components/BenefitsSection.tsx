@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, BrainCircuit, Shuffle, Rocket, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { BenefitsFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const benefits: { skill: string; result: string; icon: ReactNode; color: string }[] = [
@@ -32,6 +33,7 @@ const benefits: { skill: string; result: string; icon: ReactNode; color: string 
 
 const BenefitsSection = () => (
   <section className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
+    <BenefitsFloatingIcons />
     <div className="max-w-5xl mx-auto px-6">
       <AnimatedSection>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">

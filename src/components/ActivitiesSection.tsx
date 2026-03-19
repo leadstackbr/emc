@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Palette, Coins, Flower2, BookOpen, Trophy, Cpu, PuzzleIcon, Backpack, Music } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ActivitiesFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 import pinturaImg from "@/assets/pintura.webp";
@@ -73,6 +74,7 @@ const activities: { icon: ReactNode; title: string; desc: string; color: string;
 
 const ActivitiesSection = () => (
   <section className="relative py-20 md:py-28 bg-background overflow-hidden">
+    <ActivitiesFloatingIcons />
     <div className="absolute top-0 left-0 right-0">
       <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full rotate-180">
         <path d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z" fill="hsl(210 100% 95%)" />

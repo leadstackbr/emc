@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Music, Brain, Eye, Users, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { SolutionFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const differentials: { icon: ReactNode; title: string; desc: string }[] = [
@@ -11,7 +12,7 @@ const differentials: { icon: ReactNode; title: string; desc: string }[] = [
 
 const SolutionSection = () => (
   <section className="relative py-20 md:py-28 bg-background overflow-hidden">
-    <div className="absolute top-10 right-0 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
+    <SolutionFloatingIcons />
     <div className="absolute bottom-10 left-0 w-60 h-60 rounded-full bg-secondary/5 blur-3xl" />
 
     <div className="relative max-w-5xl mx-auto px-6">

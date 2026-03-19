@@ -6,7 +6,7 @@ import heroBg from "@/assets/hero-bg.png";
 const HeroSection = () => (
   <section
     className="relative flex flex-col items-center justify-center overflow-hidden"
-    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "900px" }}
+    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "800px" }}
   >
     <FloatingShapes />
 
@@ -15,12 +15,12 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground mb-6"
+        className="font-display text-[40px] font-extrabold leading-tight text-foreground mb-6"
       >
         Prepare seu filho para os desafios do futuro desenvolvendo{" "}
         <span className="text-primary">foco</span>,{" "}
-        <span className="text-secondary">autonomia</span> e{" "}
-        <span className="text-blue-medium">inteligência emocional</span>.
+        <span className="text-primary">autonomia</span> e{" "}
+        <span className="text-primary">inteligência emocional</span>.
       </motion.h1>
 
       <motion.p

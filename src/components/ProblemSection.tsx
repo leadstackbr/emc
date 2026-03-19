@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, ShieldAlert, ClipboardList, Lightbulb, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { ProblemFloatingIcons } from "./FloatingIcons";
 import { ReactNode } from "react";
 
 const problems: { icon: ReactNode; text: string }[] = [
@@ -11,7 +12,8 @@ const problems: { icon: ReactNode; text: string }[] = [
 ];
 
 const ProblemSection = () => (
-  <section className="relative py-20 md:py-28 bg-blue-light">
+  <section className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
+    <ProblemFloatingIcons />
     <div className="max-w-4xl mx-auto px-6">
       <AnimatedSection>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-6 leading-tight">
