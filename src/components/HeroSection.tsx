@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import FloatingShapes from "./FloatingShapes";
-import heroImg from "@/assets/hero.png";
+import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background">
+  <section
+    className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
+    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+  >
     <FloatingShapes />
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl" />
+    <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
 
     <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20 pb-10">
       <motion.h1
@@ -40,15 +43,6 @@ const HeroSection = () => (
         </a>
       </motion.div>
     </div>
-
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="relative z-10 w-full px-0"
-    >
-      <img src={heroImg} alt="Crianças em atividades educativas" className="w-full h-auto object-contain" />
-    </motion.div>
 
     <div className="absolute bottom-0 left-0 right-0">
       <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
