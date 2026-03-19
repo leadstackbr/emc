@@ -5,11 +5,10 @@ import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => (
   <section
-    className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
-    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+    className="relative flex flex-col items-center justify-center overflow-hidden"
+    style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "900px" }}
   >
     <FloatingShapes />
-    <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
 
     <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20 pb-10">
       <motion.h1
