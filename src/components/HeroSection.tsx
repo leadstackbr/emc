@@ -1,16 +1,25 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import FloatingShapes from "./FloatingShapes";
+
 import heroBg from "@/assets/hero-bg.png";
+import logoImg from "@/assets/logo-emc.png";
 
 const HeroSection = () => (
   <section
     className="relative flex flex-col items-center justify-center overflow-hidden"
     style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center", height: "800px" }}
   >
-    <FloatingShapes />
+
 
     <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20 pb-10">
+      <motion.img
+        src={logoImg}
+        alt="Clube EMC"
+        className="w-[150px] mx-auto mb-4"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      />
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,15 +41,7 @@ const HeroSection = () => (
         Muito além do reforço escolar: um ecossistema de aprendizagem ativa para crianças de 7 a 12 anos treinarem o cérebro para a vida.
       </motion.p>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <a href="#inscricao" className="btn-cta text-base md:text-lg">
-          <ArrowRight size={20} /> Quero garantir a vaga do meu filho
-        </a>
-      </motion.div>
+
     </div>
 
     <div className="absolute bottom-0 left-0 right-0">

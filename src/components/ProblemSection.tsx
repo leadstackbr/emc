@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { Target, ShieldAlert, ClipboardList, Lightbulb, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import { ProblemFloatingIcons } from "./FloatingIcons";
+
 import { ReactNode } from "react";
 
 const problems: { icon: ReactNode; text: string }[] = [
-  { icon: <Target className="text-primary" size={28} strokeWidth={2} />, text: "Manter o foco em uma única tarefa até o fim." },
-  { icon: <ShieldAlert className="text-secondary" size={28} strokeWidth={2} />, text: "Lidar com frustrações sem desistir no primeiro erro." },
-  { icon: <ClipboardList className="text-blue-medium" size={28} strokeWidth={2} />, text: "Organizar o próprio tempo e materiais de forma independente." },
-  { icon: <Lightbulb className="text-blue-dark" size={28} strokeWidth={2} />, text: "Pensar de forma crítica e criativa diante de problemas." },
+  { icon: <Target className="text-primary" size={28} strokeWidth={1.5} />, text: "Manter o foco em uma única tarefa até o fim." },
+  { icon: <ShieldAlert className="text-primary" size={28} strokeWidth={1.5} />, text: "Lidar com frustrações sem desistir no primeiro erro." },
+  { icon: <ClipboardList className="text-primary" size={28} strokeWidth={1.5} />, text: "Organizar o próprio tempo e materiais de forma independente." },
+  { icon: <Lightbulb className="text-primary" size={28} strokeWidth={1.5} />, text: "Pensar de forma crítica e criativa diante de problemas." },
 ];
 
 const ProblemSection = () => (
   <section className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
-    <ProblemFloatingIcons />
+
     <div className="max-w-4xl mx-auto px-6">
       <AnimatedSection>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-6 leading-tight">
@@ -50,13 +50,7 @@ const ProblemSection = () => (
         </p>
       </AnimatedSection>
 
-      <AnimatedSection delay={0.6}>
-        <div className="text-center">
-          <a href="#inscricao" className="btn-cta">
-            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
-          </a>
-        </div>
-      </AnimatedSection>
+
     </div>
   </section>
 );

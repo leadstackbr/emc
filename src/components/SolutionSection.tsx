@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
 import { Music, Brain, Eye, Users, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import { SolutionFloatingIcons } from "./FloatingIcons";
+
 import { ReactNode } from "react";
 
 const differentials: { icon: ReactNode; title: string; desc: string }[] = [
-  { icon: <Eye className="text-primary" size={32} strokeWidth={1.8} />, title: "Integração Sensorial", desc: "Estímulos que facilitam a aquisição de novas informações." },
-  { icon: <Music className="text-secondary" size={32} strokeWidth={1.8} />, title: "Foco Reforçado", desc: "A música treina a atenção de forma lúdica e profunda." },
-  { icon: <Users className="text-blue-medium" size={32} strokeWidth={1.8} />, title: "Interdisciplinaridade", desc: "Profissionais de diversas áreas unidos por um único objetivo: o desenvolvimento do seu pequeno aprendiz." },
+  { icon: <Eye className="text-primary" size={32} strokeWidth={1.5} />, title: "Integração Sensorial", desc: "Estímulos que facilitam a aquisição de novas informações." },
+  { icon: <Music className="text-primary" size={32} strokeWidth={1.5} />, title: "Foco Reforçado", desc: "A música treina a atenção de forma lúdica e profunda." },
+  { icon: <Users className="text-primary" size={32} strokeWidth={1.5} />, title: "Interdisciplinaridade", desc: "Profissionais de diversas áreas unidos por um único objetivo: o desenvolvimento do seu pequeno aprendiz." },
 ];
 
 const SolutionSection = () => (
   <section className="relative py-20 md:py-28 bg-background overflow-hidden">
-    <SolutionFloatingIcons />
+
     <div className="absolute bottom-10 left-0 w-60 h-60 rounded-full bg-secondary/5 blur-3xl" />
 
     <div className="relative max-w-5xl mx-auto px-6">
       <AnimatedSection>
         <div className="text-center mb-6 flex justify-center">
           <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-float">
-            <Brain className="text-primary" size={36} strokeWidth={1.8} />
+            <Brain className="text-primary" size={36} strokeWidth={1.5} />
           </div>
         </div>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">
@@ -65,13 +65,7 @@ const SolutionSection = () => (
         ))}
       </div>
 
-      <AnimatedSection delay={0.6}>
-        <div className="text-center">
-          <a href="#inscricao" className="btn-cta">
-            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
-          </a>
-        </div>
-      </AnimatedSection>
+
     </div>
   </section>
 );

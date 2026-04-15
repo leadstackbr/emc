@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 import { Sparkles, CalendarDays, Stethoscope, Home, MapPin, MessageCircle } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import { CTAFloatingIcons } from "./FloatingIcons";
+
 import { ReactNode } from "react";
+import PhotoGallery from "./PhotoGallery";
 
 const features: { icon: ReactNode; text: string }[] = [
-  { icon: <CalendarDays className="text-primary" size={22} />, text: "3 atividades semanais (1h cada)." },
-  { icon: <Stethoscope className="text-secondary" size={22} />, text: "Acompanhamento profissional interdisciplinar." },
-  { icon: <Home className="text-blue-medium" size={22} />, text: "Ambiente seguro e estimulante." },
+  { icon: <CalendarDays className="text-primary" size={22} strokeWidth={1.5} />, text: "3 atividades semanais (1h cada)." },
+  { icon: <Stethoscope className="text-primary" size={22} strokeWidth={1.5} />, text: "Acompanhamento profissional interdisciplinar." },
+  { icon: <Home className="text-primary" size={22} strokeWidth={1.5} />, text: "Ambiente seguro e estimulante." },
 ];
 
 const CTASection = () => (
   <section id="inscricao" className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
-    <CTAFloatingIcons />
+
     <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-primary/5 blur-2xl" />
     <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-secondary/5 blur-2xl" />
 
@@ -20,7 +21,7 @@ const CTASection = () => (
       <AnimatedSection>
         <div className="flex justify-center mb-6">
           <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-bounce-gentle">
-            <Sparkles className="text-primary" size={36} strokeWidth={1.8} />
+            <Sparkles className="text-primary" size={36} strokeWidth={1.5} />
           </div>
         </div>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -55,34 +56,28 @@ const CTASection = () => (
       <AnimatedSection delay={0.35}>
         <div className="section-card bg-background border-2 border-primary/10 mb-10">
           <div className="flex items-center justify-center gap-2 mb-1">
-            <MapPin className="text-primary" size={18} />
+            <MapPin className="text-primary" size={18} strokeWidth={1.5} />
             <p className="text-muted-foreground text-base">Endereço</p>
           </div>
-          <p className="text-foreground font-bold text-lg">
+          <p className="text-foreground font-bold text-lg mb-4">
             R. Petit Carneiro, 1122 - cj 205 - Água Verde, Curitiba - PR, 80240-050
           </p>
+          <PhotoGallery />
+          <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden mt-4">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.576394711335!2d-49.287501!3d-25.452422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce381147e9719%3A0xe93921f66eb4caea!2sPsiccom%20Sa%C3%BAde%20Integral%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1774027215486!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </AnimatedSection>
 
-      <AnimatedSection delay={0.45}>
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8">
-          GARANTA JÁ A VAGA DO SEU FILHO.
-        </h3>
-      </AnimatedSection>
 
-      <AnimatedSection delay={0.55}>
-        <motion.a
-          href="https://wa.me/5500000000000"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="btn-whatsapp text-base md:text-lg"
-        >
-          <MessageCircle size={24} />
-          Falar no WhatsApp
-        </motion.a>
-      </AnimatedSection>
     </div>
   </section>
 );

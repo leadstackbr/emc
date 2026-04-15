@@ -1,39 +1,39 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, BrainCircuit, Shuffle, Rocket, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import { BenefitsFloatingIcons } from "./FloatingIcons";
+
 import { ReactNode } from "react";
 
 const benefits: { skill: string; result: string; icon: ReactNode; color: string }[] = [
   {
     skill: "Controle Inibitório",
     result: "Ele pensa antes de agir e lida melhor com impulsos e emoções.",
-    icon: <ShieldCheck className="text-primary" size={28} strokeWidth={2} />,
+    icon: <ShieldCheck className="text-primary" size={28} strokeWidth={1.5} />,
     color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Memória de Trabalho",
     result: "Ele consegue seguir instruções e organizar o raciocínio com clareza.",
-    icon: <BrainCircuit className="text-blue-medium" size={28} strokeWidth={2} />,
-    color: "bg-blue-medium/10 border-blue-medium/20",
+    icon: <BrainCircuit className="text-primary" size={28} strokeWidth={1.5} />,
+    color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Flexibilidade Cognitiva",
     result: "Menos \"travas\" diante do novo e mais criatividade para resolver problemas.",
-    icon: <Shuffle className="text-secondary" size={28} strokeWidth={2} />,
+    icon: <Shuffle className="text-primary" size={28} strokeWidth={1.5} />,
     color: "bg-primary/10 border-primary/20",
   },
   {
     skill: "Autonomia Real",
     result: "Menos dependência dos pais para o dever de casa e rotinas básicas.",
-    icon: <Rocket className="text-blue-dark" size={28} strokeWidth={2} />,
-    color: "bg-secondary/10 border-secondary/20",
+    icon: <Rocket className="text-primary" size={28} strokeWidth={1.5} />,
+    color: "bg-primary/10 border-primary/20",
   },
 ];
 
 const BenefitsSection = () => (
   <section className="relative py-20 md:py-28 bg-blue-light overflow-hidden">
-    <BenefitsFloatingIcons />
+
     <div className="max-w-5xl mx-auto px-6">
       <AnimatedSection>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 leading-tight">
@@ -68,13 +68,7 @@ const BenefitsSection = () => (
         ))}
       </div>
 
-      <AnimatedSection delay={0.6}>
-        <div className="text-center">
-          <a href="#inscricao" className="btn-cta">
-            <ArrowRight size={20} /> Quero garantir a vaga do meu filho
-          </a>
-        </div>
-      </AnimatedSection>
+
     </div>
   </section>
 );
